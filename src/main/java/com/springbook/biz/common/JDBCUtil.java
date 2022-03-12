@@ -6,8 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class JDBCUtil {
-    private static final String USERNAME = "root";
-    private static final String PW = "root";
+    private static final String USERNAME = "sa";
+    private static final String PW = "";
 
     public static Connection getConnection() {
         try {
