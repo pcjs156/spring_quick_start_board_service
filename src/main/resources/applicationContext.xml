@@ -20,8 +20,8 @@
     <aop:config>
         <aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))"/>
 
-        <aop:aspect ref="around">
-            <aop:around method="aroundLog" pointcut-ref="allPointcut"/>
+        <aop:aspect ref="before">
+            <aop:after method="beforeLog" pointcut-ref="allPointcut"/>
         </aop:aspect>
     </aop:config>
 
