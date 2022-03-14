@@ -17,7 +17,7 @@
         <aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))"/>
 
         <aop:aspect ref="log">
-            <aop:before method="printLog" pointcut-ref="getPointcut"/>
+            <aop:after method="printLog" pointcut-ref="getPointcut"/>
         </aop:aspect>
     </aop:config>
 
