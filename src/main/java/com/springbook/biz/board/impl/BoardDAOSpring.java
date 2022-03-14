@@ -17,11 +17,6 @@ import java.util.List;
 public class BoardDAOSpring extends JdbcDaoSupport {
     private static final String TABLE_NAME = "board";
 
-    // JDBC 관련 변수
-    private Connection conn = null;
-    private PreparedStatement stmt = null;
-    private ResultSet rs = null;
-
     // SQL 명령어들
     private final String BOARD_INSERT = "INSERT INTO " + TABLE_NAME + "(seq, title, writer, content) " +
             "VALUES((SELECT nvl(max(seq), 0)+1 FROM " + TABLE_NAME + "), ?, ?, ?)";
