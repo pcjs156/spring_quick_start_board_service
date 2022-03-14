@@ -19,9 +19,10 @@
 
     <aop:config>
         <aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))"/>
+        <aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))"/>
 
-        <aop:aspect ref="before">
-            <aop:after method="beforeLog" pointcut-ref="allPointcut"/>
+        <aop:aspect ref="afterReturning">
+            <aop:after-returning method="afterLog" returning="returnObj" pointcut-ref="getPointcut"/>
         </aop:aspect>
     </aop:config>
 
