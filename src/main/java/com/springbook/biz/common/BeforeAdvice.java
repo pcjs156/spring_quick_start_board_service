@@ -13,7 +13,7 @@ public class BeforeAdvice {
     public void allPointcut() {
     }
 
-    @Before("allPointcut()")
+    @Before("PointcutCommon.allPointcut()")
     public void beforeLog(JoinPoint jp) {
         String method = jp.getSignature().getName();
         Object[] args = jp.getArgs();
