@@ -2,12 +2,14 @@ package com.springbook.biz.user.impl;
 
 import com.springbook.biz.common.JDBCUtil;
 import com.springbook.biz.user.UserVO;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 // DAO (Data Access Object)
+@Repository("userDAO")
 public class UserDAO {
     private static final String TABLE_NAME = "users";
 
