@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 
 // DAO (Data Access Object)
 public class UserDAO {
-    private static final String TABLE_NAME = "user";
+    private static final String TABLE_NAME = "users";
 
     // JDBC 관련 변수
     private Connection conn = null;
