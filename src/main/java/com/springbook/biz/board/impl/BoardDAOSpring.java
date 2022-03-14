@@ -1,20 +1,19 @@
 package com.springbook.biz.board.impl;
 
 import com.springbook.biz.board.BoardVO;
-import com.springbook.biz.common.JDBCUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
 
 @Repository("boardDAOSpring")
 public class BoardDAOSpring extends JdbcDaoSupport {
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
     private static final String TABLE_NAME = "board";
 
     // SQL 명령어들
