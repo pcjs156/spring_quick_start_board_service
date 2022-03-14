@@ -16,7 +16,7 @@ public class AfterReturningAdvice {
 
         if (returnObj instanceof UserVO) {
             UserVO user = (UserVO) returnObj;
-            if (user.getRole().toLowerCase().equals("admin")) {
+            if (user.getRole().equalsIgnoreCase("admin")) {
                 System.out.println(user.getName() + " 로그인 (Admin)");
             }
         }
