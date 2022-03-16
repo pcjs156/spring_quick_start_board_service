@@ -63,7 +63,7 @@
     </form>
     <hr>
     <a href="insertBoard.jsp">글 등록</a> &nbsp;&nbsp;&nbsp;
-    <a href="deleteBoard.jsp">글 삭제</a> &nbsp;&nbsp;&nbsp;
+    <a href="deleteBoard_proc.jsp?seq=<%=board.getSeq()%>">글 삭제</a> &nbsp;&nbsp;&nbsp;
     <a href="getBoardList.jsp.jsp">글 목록</a>
 </center>
 </body>
